@@ -12,27 +12,24 @@ for (var i = 0; i < mylist.length; i++) {
 }
 
 
-var removecontentlist = document.getElementsByClassName("remove");
+let lis = [...document.querySelectorAll('.remove')];
 
-for (var i = 0; i < removecontentlist.length; i++) {
-  removecontentlist[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
+
+for (const li of lis) {
+  li.addEventListener('click', function() {
+      var div = this.parentElement;
+      div.remove();
+    this.parentNode.removeChild(this);
+  })
 }
 
-//Add a "checked" symbl when clicking on a list item
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  function(ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("underline");
-    }
-  },
-  false
-);
+let testlist = [...document.querySelectorAll('li')];
 
+for (const li of testlist) {
+  li.addEventListener('click', function() {
+      this.classList.toggle("underline");
+  })
+}
 
 
 function addlist(){
@@ -41,7 +38,6 @@ function addlist(){
   var text = document.createTextNode(`${listadd}`);  
   if (listadd == ''){
     alert("Please insert on To Do box")
-//      document.getElementsByClassName("welcome-title").value = "please insert on To Do Box"
   }else{
     calllist.appendChild(text);                              
   document.getElementById("list").appendChild(calllist);    
@@ -57,11 +53,17 @@ function addlist(){
  span.appendChild(image);
  calllist.appendChild(span);
 
-// for (var i = 0; i < removecontentlist.length; i++) {
-//  removecontentlist[i].onclick = function() {
-//    var div = this.parentElement;
-//    div.style.display = "none";
-//  }
-//}
+ span.addEventListener('click', function() {
+      var div = this.parentElement;
+      div.remove();
+    this.parentNode.removeChild(this);
+  })
+
+
+calllist.addEventListener('click', function() {
+      this.classList.toggle("underline");
+  })
+
+
 
 }
