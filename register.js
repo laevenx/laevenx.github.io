@@ -9,23 +9,28 @@ function onRegister(){
     var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     
     if (!first_name){
-        alert("nama depan tidak boleh kosong")
+    document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML = "nama depan tidak boleh kosong"
          return false
     }
     
     if(first_name.match(format)){
-        alert("nama depan harus huruf")
+    document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML = "nama depan harus huruf"
         return false
     }else if(last_name.match(format)){
-        alert("nama akhir harus huruf")
+    document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML = "nama akhir harus huruf"
         return false
     }
 
     if (!user){
-        alert("email tidak boleh kosong")
+    document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML = "email tidak boleh kosong"
         return false
     }else if (user.length < 5){
-        alert("email harus lebih dari 6 huruf")
+     document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML = "email harus lebih dari 6 huruf"
         return false
     }
     
@@ -39,22 +44,31 @@ function onRegister(){
         }
     }
     
-    if (!ada_at){
-        alert("anda lupa @")
+     if (!ada_at){
+         document.getElementById("errorbox").style.display = "block"
+            document.getElementById("close").innerHTML = "anda lupa @"
+
         return false
     }else if (!ada_titik){
-        alert("email kurang titik")
+            document.getElementById("errorbox").style.display = "block"
+            document.getElementById("close").innerHTML = "email kurang titik"
         return false
     }
     
-    if(!pass){
-        alert("password tidak boleh kosong")
-         return false
+   if(!pass){
+         document.getElementById("errorbox").style.display = "block"
+            document.getElementById("close").innerHTML ="password tidak boleh kosong"
+        return false
     }else if (pass.length < 6){
-        alert("password harus lebih dari 6")
-         return false
+        document.getElementById("errorbox").style.display = "block"
+            document.getElementById("close").innerHTML ="password harus lebih dari 6"
+        return false
     }
     
     return location.href = "main.html"
     
+}
+
+function closeDoor(){
+    document.getElementById("errorbox").style.display = "none";
 }
