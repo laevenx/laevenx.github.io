@@ -1,13 +1,14 @@
 function onRegister(){
     let first_name= document.getElementById("Fname").value
     let last_name= document.getElementById("Lname").value
-    var user = document.getElementById("username").value;
-    var pass = document.getElementById("password").value;
+    var user = document.getElementById("Username").value;
+    var pass = document.getElementById("Password").value;
     var ada_at = false
     var ada_titik = false
     
     if (!first_name){
         alert("nama depan tidak boleh kosong")
+         return false
     }
 
     if (!user){
@@ -38,8 +39,10 @@ function onRegister(){
     
     if(!pass){
         alert("password tidak boleh kosong")
+         return false
     }else if (pass.length < 6){
         alert("password harus lebih dari 6")
+         return false
     }
     
     return location.href = "main.html"
