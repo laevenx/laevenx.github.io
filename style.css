@@ -33,6 +33,11 @@ body{
 
 .welcome{
     margin-bottom: -100px;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 
 .artstation{
@@ -59,6 +64,11 @@ height:100px;
 .intro{
     text-align:center;
     margin: 40px 180px;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 
 p{
@@ -129,6 +139,8 @@ h5.foot {
     z-index=1000;
 }
 
+/*login style*/
+
 
 .box{
     margin-top: 150px;
@@ -171,6 +183,11 @@ h5.foot {
 
 .welcomelogin{
     margin-bottom: -10px;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 
 .login-title{
@@ -179,7 +196,11 @@ h5.foot {
 
 
 .login-to-main{
-
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
     border-radius: 5px;
      margin: auto 40%; 
     padding : 15px;
@@ -196,6 +217,8 @@ h5.foot {
     text-decoration: none;
     z-index=1000;
 }
+
+/*register style*/
 
 .register-to-main{
     margin-top: 50px;
@@ -215,6 +238,8 @@ h5.foot {
     z-index=1000;
 }
 
+
+
 .welcome-title{
     margin-bottom: -150px;
 }
@@ -230,6 +255,8 @@ input {
     margin: auto 35%;  
   }
 
+/*main style*/
+
 .addBtn {
     padding: 10px;
     width: 25%;
@@ -242,6 +269,11 @@ input {
     transition: 0.3s;
     border-radius: 0;
      margin: auto 35%; 
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
   }
   
   .addBtn:hover {
@@ -252,7 +284,7 @@ input {
       
     text-decoration: none;
     list-style: none;
-    margin: auto 35% 50px 30%; 
+    margin: auto 37% 50px 30%; 
   }
  
   li{
@@ -260,6 +292,11 @@ input {
     border-radius: 12px;
     margin-bottom: 15px;
     font-size: 24px;
+      -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
   }
 
   .todolist{
@@ -268,7 +305,11 @@ input {
   }
 
   .remove {
-
+      -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
       float:right;
       border-radius: 12px;
   }
@@ -278,3 +319,7 @@ input {
     color: white;
     transition: 0.5s;
   }
+
+.underline{
+    text-decoration:line-through 
+}

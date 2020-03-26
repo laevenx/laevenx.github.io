@@ -1,5 +1,3 @@
-
-
 var mylist = document.getElementsByTagName("li");
 
 for (var i = 0; i < mylist.length; i++) {
@@ -23,12 +21,27 @@ for (var i = 0; i < removecontentlist.length; i++) {
   }
 }
 
+//Add a "checked" symbl when clicking on a list item
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function(ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("underline");
+    }
+  },
+  false
+);
+
+
+
 function addlist(){
   var listadd = document.getElementById("myInput").value;
   var calllist = document.createElement("li");                
   var text = document.createTextNode(`${listadd}`);  
   if (listadd == ''){
     alert("Please insert on To Do box")
+//      document.getElementsByClassName("welcome-title").value = "please insert on To Do Box"
   }else{
     calllist.appendChild(text);                              
   document.getElementById("list").appendChild(calllist);    
@@ -44,11 +57,11 @@ function addlist(){
  span.appendChild(image);
  calllist.appendChild(span);
 
- for (var i = 0; i < removecontentlist.length; i++) {
-  removecontentlist[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+// for (var i = 0; i < removecontentlist.length; i++) {
+//  removecontentlist[i].onclick = function() {
+//    var div = this.parentElement;
+//    div.style.display = "none";
+//  }
+//}
 
 }
