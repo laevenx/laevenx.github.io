@@ -5,17 +5,27 @@ function onRegister(){
     var pass = document.getElementById("Password").value;
     var ada_at = false
     var ada_titik = false
+
+    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     
     if (!first_name){
         alert("nama depan tidak boleh kosong")
          return false
     }
+    
+    if(first_name.match(format)){
+        alert("nama depan harus huruf")
+        return false
+    }else if(last_name.match(format)){
+        alert("nama akhir harus huruf")
+        return false
+    }
 
     if (!user){
-        alert("username tidak boleh kosong")
+        alert("email tidak boleh kosong")
         return false
     }else if (user.length < 5){
-        alert("username harus lebih dari 6 huruf")
+        alert("email harus lebih dari 6 huruf")
         return false
     }
     
@@ -33,7 +43,7 @@ function onRegister(){
         alert("anda lupa @")
         return false
     }else if (!ada_titik){
-        alert("username kurang titik")
+        alert("email kurang titik")
         return false
     }
     

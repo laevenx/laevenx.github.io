@@ -6,10 +6,10 @@ function onLogin(){
 
 
     if (!user){
-        alert("username tidak boleh kosong")
+        alert("email tidak boleh kosong")
         return false
     }else if (user.length < 5){
-        alert("username harus lebih dari 6 huruf")
+        alert("email harus lebih dari 6 huruf")
         return false
     }
     
@@ -27,7 +27,7 @@ function onLogin(){
         alert("anda lupa @")
         return false
     }else if (!ada_titik){
-        alert("username kurang titik")
+        alert("email kurang titik")
         return false
     }
     
