@@ -37,7 +37,9 @@ function addlist(){
   var calllist = document.createElement("li");                
   var text = document.createTextNode(`${listadd}`);  
   if (listadd == ''){
-    alert("Please insert on To Do box")
+    document.getElementById("errorbox").style.display = "block"
+    document.getElementById("close").innerHTML ="Please insert on To Do box"
+    return false
   }else{
     calllist.appendChild(text);                              
   document.getElementById("list").appendChild(calllist);    
@@ -66,4 +68,8 @@ calllist.addEventListener('click', function() {
 
 
 
+}
+
+function closeDoor(){
+  document.getElementById("errorbox").style.display = "none";
 }
