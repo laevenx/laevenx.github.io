@@ -122,7 +122,7 @@ h5.foot {
 .login{
 
     border-radius: 5px;
-
+    cursor: pointer;
      margin: auto 40%; 
     padding : 15px;
     background: black;
@@ -184,11 +184,7 @@ h5.foot {
 
 .welcomelogin{
     margin-bottom: -10px;
-    -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
+
 }
 
 .login-title{
@@ -197,11 +193,12 @@ user-select: none;
 
 
 .login-to-main{
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
+    cursor: pointer;
+    /* -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; */
     border-radius: 5px;
      margin: auto 40%; 
     padding : 15px;
@@ -222,6 +219,7 @@ user-select: none;
 /*register style*/
 
 .register-to-main{
+    cursor: pointer;
     margin-top: 50px;
     border-radius: 5px;
     padding : 15px;
@@ -229,11 +227,6 @@ user-select: none;
     text-decoration: none;
     list-style: none;
     transition: 0.5s;
-      -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
 }
 
 .register-to-main:hover{
@@ -308,6 +301,7 @@ user-select: none;
   }
 
 li:hover{
+    cursor: pointer;
     background: #00FF00;
     transition: 0.5s
 }
@@ -319,10 +313,11 @@ li:hover{
 
   .remove {
       -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
       float:right;
       border-radius: 12px;
   }
