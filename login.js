@@ -55,13 +55,3 @@ function closeDoor(){
     document.getElementById("errorbox").style.display = "none";
 }
 
-//var c=0
-//function pop(){
-//    if (c ==0){
-//        document.getElementById("errorbox").style.display - "block"
-//        c=1;
-//    }else {
-//        document.getElementById("errorbox").style.display - "none"
-//        c=0;
-//    }
-//}
